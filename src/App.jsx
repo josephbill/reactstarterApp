@@ -5,6 +5,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LoginForm from './components/LoginForm'
 import LoginHeader from './components/LoginHeader'
+import BadCounter from './statetestcomponents/badCounter'
+import GoodCounter from './statetestcomponents/GoodCounter'
+import ArrayStateExample from './statetestcomponents/ArrayStateExample'
+import EventHandlersDemo from './statetestcomponents/EventHandlersDemo'
+
 function App() {
   // define the state variables 
   const [loginStatus, setLoginStatus] = useState('')
@@ -37,11 +42,21 @@ function App() {
            <LoginHeader title="Welcome Back" apptitle="MyApp"/>
            {/* parent to child communication -> props */}
            {/* child to parent communication -> callback function */}
-           <LoginForm onlogin={handleLogin}/>
+           {/* <LoginForm onlogin={handleLogin}/> */}
            {/* conditional rendering */}
-           <div>
+           {/* <div>
               {tagValue()}
+           </div> */}
+           {/* <div>
+               <BadCounter/>
+               <GoodCounter/>
+           </div> */}
+           <div>
+            <ArrayStateExample/>
            </div>
+           {/* <div>
+            <EventHandlersDemo/>
+           </div> */}
            {/* {loginStatus && <p>{loginStatus}</p>} */}
        </div>
     </>
